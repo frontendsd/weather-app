@@ -40,10 +40,10 @@ let apiLink =  'https://api.openweathermap.org/data/2.5/weather'
        }
 
         function getData(data) {
-            console.log(1)
             overlay.classList.add('hidden')
             const weather = data
-            console.log(weather)
+            console.log(data)
+            // const {name,sys,main,wind} = weather
             city_nameEl.innerHTML = `<span>${weather.name}, <span>${weather.sys.country}</span></span>`
             info.textContent = `${weather.main.temp.toFixed(0)}℃`
             max.textContent = `${Math.ceil(weather.main.temp_max)}℃`
